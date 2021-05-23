@@ -18,11 +18,11 @@ Após a verificação da tag, mesmo que não tenha sido pesquisada anteriormente
 Após obter os dados das frases que possuem a tag passada como parâmetro os dados serão formatados através de uma seralização de objetos e retornando um json.
 Para proteger as requisições ao endpoint foi criado uma constante "TOKEN" para armazenar o token de acesso. Quando uma requisição for feita será obtido o seu token e comparado com o valor armazenado na constante "TOKEN", só será possível ter acesso aos dados as requisiçĩoes que possuirem o tokem igual o da constante.
 
-##Funcionamento
+## Funcionamento
 - Primeiro devemos instalar as dependências utilizadas atraves do comando "bundle install".
 - Logo depois precisamos iniciar o serviço do mongodb através do comando "systemctl start mongod".
 - Em seguida devemos iniciar a execução da aplicação através do comando "rails s".
 - Para realizar um teste iremos utilizar o Postman.
-    - Iremos fazer uma requisição do tipo "Get" e utilizando autozização através de token. O token de acesso "secret123".
-    - 
+    - Iremos fazer uma requisição do tipo "Get" como por exemplo "http://localhost:3000/quotes/life" e utilizando autozização através de token. O token de acesso deve possuir valor igual a "secret123".
+    - Na requisição acima será retornado um json com os dados de todas as frases que possuem a tag "life".
 
