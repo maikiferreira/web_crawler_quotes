@@ -69,7 +69,7 @@ def obterTagsQuote(tags, param)
   tag
 end
 
-# 
+# Executa o crawler para obter as informações do site e armazenar no banco de dados.
 def crawlerSite(param)
   url = 'http://quotes.toscrape.com/'
   html = URI.open(url)
