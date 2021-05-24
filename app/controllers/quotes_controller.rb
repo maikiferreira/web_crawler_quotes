@@ -4,7 +4,7 @@ require 'open-uri'
 class QuotesController < ApplicationController
 
   # Constante para armazenar o valor do token necessário para se ter acesso a API.
-  TOKEN = "secret123"
+  TOKEN = "123456"
   URL = 'http://quotes.toscrape.com/'
 
   include ActionController::HttpAuthentication::Token::ControllerMethods
