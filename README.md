@@ -13,7 +13,9 @@ As dúvidas e solicitações relacionadas ao acesso da API, devem ser enviadas p
 
 ## Solução Adotada
 
-A solução do desafio foi feita criando um documento "Quote" para armazenar os dados obtidos através do crawler e o documento "Tag" para armazenar as tags que foram pesquisadas.
+A solução do desafio foi feita utilizando o a linguagem de programação "ruby", o farmework "Ruby on Rails" e o "MongoDB" que é um banco de dados orientado a documentos. Para trabalhar com o "MongoDB" foi utilizado a gem "mongoid" que é uma estrutura ODM (Object-Document Mapper) para MongoDB em Ruby.
+
+Foi criado um documento "Quote" para armazenar os dados obtidos através do crawler e o documento "Tag" para armazenar as tags que foram pesquisadas.
 
 Com a criação da rota "/quote/{SEARCH_TAG}" foi possível obter a tag passada como parâmetro.
 
@@ -87,3 +89,19 @@ SEARCH_TAG é a tag que será utilizada como parâmetro de busca.
 			    }
 			]
  
+ ## Executando o Projeto Localmente
+
+- No diretório devemos executar o seguinte comando para instalar as dependências especificadas no Gemfile.
+	>  bundle install
+	
+- Iniciando o serviço do MongoDB 
+	> systemctl start mongod
+
+- Iniciando o servidor quem vem junto com o Ruby para acessar a aplicação por meio da web.
+	> rails s
+
+- Utilizando o Postman para realizar uma requisição.
+	- A requisição deve ser do tipo "GET".
+	- A URL deve ser no formato "http://localhost:3000/quotes/{SEARCH_TAG}"
+	- A autenticação deve ser feita em "Query Params" onde no campo "Key" deve-ser preencher com "authorization" e em "Value" deverá ser preenchido com "Bearer Token 123456".
+	- O retorno da requisição será um json contendo os dados das frases que possuem a "SEARCH_TAG" em suas tags. 
