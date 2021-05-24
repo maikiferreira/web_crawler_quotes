@@ -1,7 +1,8 @@
 # README
 
 ## Objetivo
-O objetivo deste software é a implementação de um software que irá buscar os dados no site "http://quotes.toscrape.com/" através de um web crawler.
+O objetivo deste software é a implementação de um sistema que irá buscar os dados no site "http://quotes.toscrape.com/" através de um web crawler e disponibilizar os dados através de uma API. A API possui o endpoint "/quotes/{SEARCH_TAG}"
+
 A api possui o endpoint "/quotes/{SEARCH_TAG}" onde será disponibilizado os dados de acordo com a tag passada.
 
 ## Tecnologias Utilizadas
