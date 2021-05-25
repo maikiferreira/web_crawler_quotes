@@ -59,7 +59,8 @@ Para utilizar a API deve-se utilizar o token com valor igual a `123456`.
 
 Utilizando o Postman para fazer uma requisição:
 
- - Em `Query Params` no campo `Key` será preenchido com `authorization` e em `Value` será preenchido com `Bearer Token 123456`.
+ - Na opção `Authorization` selecione o `type` `Bearer Token` e preencha o campo `Token` com `123456`.
+ 
 
 ## Recursos
 
